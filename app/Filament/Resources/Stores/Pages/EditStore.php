@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Stores\Pages;
 
+use App\Filament\Resources\Stores\RelationManagers\ProductsRelationManager;
 use App\Filament\Resources\Stores\StoreResource;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ForceDeleteAction;

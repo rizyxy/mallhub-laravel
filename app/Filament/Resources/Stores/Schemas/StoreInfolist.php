@@ -3,8 +3,9 @@
 namespace App\Filament\Resources\Stores\Schemas;
 
 use App\Models\Store;
-use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ImageEntry;
 
 class StoreInfolist
 {
@@ -21,10 +22,10 @@ class StoreInfolist
                 TextEntry::make('floor.id')
                     ->label('Floor'),
                 TextEntry::make('name'),
-                TextEntry::make('logo_url'),
+                ImageEntry::make('logo_url'),
                 TextEntry::make('deleted_at')
                     ->dateTime()
-                    ->visible(fn (Store $record): bool => $record->trashed()),
+                    ->visible(fn(Store $record): bool => $record->trashed()),
             ]);
     }
 }

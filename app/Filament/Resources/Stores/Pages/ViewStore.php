@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Stores\Pages;
 
+use App\Filament\Resources\Stores\RelationManagers\ProductsRelationManager;
 use App\Filament\Resources\Stores\StoreResource;
 use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;

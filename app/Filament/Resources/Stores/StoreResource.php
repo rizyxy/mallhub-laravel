@@ -6,6 +6,7 @@ use App\Filament\Resources\Stores\Pages\CreateStore;
 use App\Filament\Resources\Stores\Pages\EditStore;
 use App\Filament\Resources\Stores\Pages\ListStores;
 use App\Filament\Resources\Stores\Pages\ViewStore;
+use App\Filament\Resources\Stores\RelationManagers\ProductsRelationManager;
 use App\Filament\Resources\Stores\Schemas\StoreForm;
 use App\Filament\Resources\Stores\Schemas\StoreInfolist;
 use App\Filament\Resources\Stores\Tables\StoresTable;
@@ -44,7 +45,7 @@ class StoreResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ProductsRelationManager::class
         ];
     }
 

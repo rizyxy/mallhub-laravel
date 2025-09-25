@@ -1,3 +1,13 @@
+<p align='center'>
+    <img width="300" height="100" alt="image" src="https://github.com/user-attachments/assets/f5f6178e-022a-49f4-b48a-ad9e160bb506" />
+</p>
+
+<p align='center'>
+    <img width="100" height="50" alt="image" src="https://github.com/user-attachments/assets/9472bd49-2973-4fb6-a3fe-f54f1d671976" />
+</p>
+
+<br>
+
 ## About MallHub
 
 Your ultimate mall companion. Browse products, discover sales, and connect with stores—all from your phone. For shoppers, it’s a smarter way to find what you love. For stores, it’s a new way to get noticed.

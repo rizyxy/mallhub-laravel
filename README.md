@@ -15,9 +15,9 @@ Your ultimate mall companion. Browse products, discover sales, and connect with 
 
     Acceptable Query:
 
-    1. store_id: Filter product based on the store
-    2. sub_category_id: Filter product based on the subcategory
-    3. name: Filter product based on the name
+    -   store_id: Filter product based on the store
+    -   sub_category_id: Filter product based on the subcategory
+    -   name: Filter product based on the name
 
 -   **api/stores**: Display paginated store catalog eager loaded with floor data
 
@@ -26,8 +26,9 @@ Your ultimate mall companion. Browse products, discover sales, and connect with 
 
     Acceptable Query:
 
-    1. floor_id: Filter store based on the floor
-    2. name: Filter store based on the name
+    -   floor_id: Filter store based on the floor
+
+    -   name: Filter store based on the name
 
 -   **api/floors**: Display all floors
 
@@ -49,6 +50,6 @@ Your ultimate mall companion. Browse products, discover sales, and connect with 
 
     Required Query:
 
-    1.  category_id
+    -   category_id
 
     Acceptable Query: None

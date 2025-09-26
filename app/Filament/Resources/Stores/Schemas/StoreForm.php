@@ -19,6 +19,8 @@ class StoreForm
                 TextInput::make('name')
                     ->required(),
                 FileUpload::make('logo_url')
+                    ->visibility('public')
+                    ->directory('store-logo')
                     ->required(),
             ]);
     }

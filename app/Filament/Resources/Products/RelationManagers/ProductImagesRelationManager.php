@@ -35,6 +35,9 @@ class ProductImagesRelationManager extends RelationManager
                 FileUpload::make('url')
                     ->visibility('public')
                     ->imageEditor()
+                    ->imageEditorAspectRatios([
+                        '4:3',
+                    ])
                     ->required(),
             ]);
     }

@@ -36,7 +36,7 @@ class ProductImagesRelationManager extends RelationManager
                     ->visibility('public')
                     ->imageEditor()
                     ->imageEditorAspectRatios([
-                        '4:3',
+                        '3:4',
                     ])
                     ->required(),
             ]);

@@ -33,6 +33,7 @@ class ProductImagesRelationManager extends RelationManager
         return $schema
             ->components([
                 FileUpload::make('url')
+                    ->visibility('public')
                     ->imageEditor()
                     ->required(),
             ]);

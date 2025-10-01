@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Floor;
+use App\Models\Store;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        for ($i = 1; $i < 10; $i++) {
+            $floor = Floor::factory()->create([
+                'name' => "Lantai " . $i,
+            ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+            Store::factory(10)->create([
+                'floor_id' => $floor->id
+            ]);
+        }
     }
 }

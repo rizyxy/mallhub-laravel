@@ -2,25 +2,23 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Store extends Model
+class SubCategory extends Model
 {
-    use SoftDeletes, HasFactory;
+    use SoftDeletes;
 
     protected $fillable = [
-        'floor_id',
-        'logo_url',
+        'category_id',
         'name'
     ];
 
-    public function floor(): BelongsTo
+    public function category(): BelongsTo
     {
-        return $this->belongsTo(Floor::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function products(): HasMany

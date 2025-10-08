@@ -14,10 +14,9 @@ class IndexProductController extends Controller
     public function __invoke(Request $request)
     {
         try {
-
             $query = Product::query();
 
-            $query = $query->with(['store', 'productImages']);
+            $query = $query->with(['store.floor', 'productImages']);
 
             $products = $query->cursorPaginate(10);
 

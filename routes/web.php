@@ -6,6 +6,7 @@ use App\Http\Controllers\IndexFloorController;
 use App\Http\Controllers\IndexProductController;
 use App\Http\Controllers\IndexStoreCatalogController;
 use App\Http\Controllers\IndexStoreController;
+use App\Http\Controllers\IndexSubCategoryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,6 +16,8 @@ Route::get('/', function () {
 Route::prefix('/api')->group(function () {
 
     Route::get('/categories', IndexCategoryController::class);
+
+    Route::get('/category/{categoryId}/subcategories', IndexSubCategoryController::class);
 
     Route::get('/floors', IndexFloorController::class);
 

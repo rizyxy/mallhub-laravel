@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndexCategoryController;
 use App\Http\Controllers\IndexFloorCatalogController;
 use App\Http\Controllers\IndexFloorController;
 use App\Http\Controllers\IndexProductController;
@@ -12,6 +13,8 @@ Route::get('/', function () {
 });
 
 Route::prefix('/api')->group(function () {
+
+    Route::get('/categories', IndexCategoryController::class);
 
     Route::get('/floors', IndexFloorController::class);
 

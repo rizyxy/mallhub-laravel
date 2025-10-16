@@ -16,6 +16,11 @@ class IndexProductController extends Controller
         try {
             $query = Product::query();
 
+            if ($request->has('searchQuery')) {
+                $searchQuery = $request->query('searchQuery');
+                $query = $query->where('name', 'like', "%{$searchQuery}%");
+            }
+
             $query = $query->with(['store.floor', 'productImages']);
 
             $products = $query->cursorPaginate(10);

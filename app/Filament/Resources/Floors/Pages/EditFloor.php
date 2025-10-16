@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Filament\Resources\Floors\Pages;
+
+use App\Filament\Resources\Floors\FloorResource;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
+use Filament\Resources\Pages\EditRecord;
+
+class EditFloor extends EditRecord
+{
+    protected static string $resource = FloorResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            DeleteAction::make(),
+            ForceDeleteAction::make(),
+            RestoreAction::make(),
+        ];
+    }
+}

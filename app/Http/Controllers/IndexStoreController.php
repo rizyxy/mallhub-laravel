@@ -16,6 +16,12 @@ class IndexStoreController extends Controller
         try {
             $query = Store::query();
 
+            if ($request->has('searchQuery')) {
+                $searchQuery = $request->query('searchQuery');
+                $query = $query->where('name', 'like', "%{$searchQuery}%");
+            }
+
+
             $query->with('floor');
 
             $stores = $query->cursorPaginate(10);

@@ -4,6 +4,7 @@ use App\Http\Controllers\IndexCategoryController;
 use App\Http\Controllers\IndexFloorCatalogController;
 use App\Http\Controllers\IndexFloorController;
 use App\Http\Controllers\IndexProductController;
+use App\Http\Controllers\IndexSimilarProductsController;
 use App\Http\Controllers\IndexStoreCatalogController;
 use App\Http\Controllers\IndexStoreController;
 use App\Http\Controllers\IndexSubCategoryCatalogController;
@@ -31,4 +32,6 @@ Route::prefix('/api')->group(function () {
     Route::get('/store/{storeId}/products', IndexStoreCatalogController::class);
 
     Route::get('/products', IndexProductController::class);
+
+    Route::get('/product/{productId}/similar', IndexSimilarProductsController::class);
 });

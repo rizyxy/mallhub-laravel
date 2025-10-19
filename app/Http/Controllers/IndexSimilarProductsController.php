@@ -19,7 +19,10 @@ class IndexSimilarProductsController extends Controller
 
             $similarProductIds = $response['data'];
 
-            $similarProducts = Product::findMany($similarProductIds);
+            $similarProducts = Product::whereIn('id', $similarProductIds)
+                ->with(['store', 'productImages'])
+                ->get();
+
 
             return response()->json($similarProducts);
         } catch (\Throwable $th) {

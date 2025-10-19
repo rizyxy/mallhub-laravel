@@ -17,7 +17,7 @@ class ProductImageFactory extends Factory
     public function definition(): array
     {
         return [
-            'url' => fake()->url()
+            'url' => 'https://placehold.co/400'
         ];
     }
 }
